@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+ <head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Programs SE Department</title>
+
+    <style>
+
+.body {
+            background-color:rgb(237, 243, 247);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .image-container {
+            width: 23%;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container:hover {
+            transform: scale(1.05);
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .image-container p {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Media Queries */
+@media screen and (max-width: 1200px) {
+  .image-container {
+    width: 31%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .image-container {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image-container {
+    width: 100%;
+  }
+}
+    </style>
+</head>
+<body>
+  <header class="header">
+    <a style="color: rgb(67, 15, 116)" href="#" target="_blank" class="logo">Department Of Software Engineering</a>
+    <div class="mobile-navbar-btn">
+      <ion-icon name="menu" class="mobile-nav-icon"></ion-icon>
+      <ion-icon name="close-outline" class="mobile-nav-icon close-icon"></ion-icon>
+    </div>
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li><a href="index.html" class="navbar-link">Home</a></li>
+        <li><a href="about.html" class="navbar-link">About</a></li>
+        <li><a href="programs.html" class="navbar-link">Courses</a></li>
+        <li><a href="contact us.html" class="navbar-link">Contact Us</a></li>
+        <li><a href="https://www.iub.edu.pk/" class="btn navbar-btn">My Iub</a></li>
+      </ul>
+    </nav>
+  </header>
+    <main style="background-color: rgb(237, 243, 247); padding-bottom: 70px;">
+        <div style="padding-top: 50px;text-align: center;margin-bottom: 25px;margin-top: 25;">
+            <h1 ><u>>>WE ARE CURRENTLY OFFERING THESE COURSES<<</u></h1>
+        </div>
+        <div class="body">
+            <div class="image-container">
+                <img src="1.jpeg" alt="Image 1">
+                <p><h2 style="text-align:center;padding-top: 20px ;">Web System and Technology</h2></p>
+            </div>
+        
+            <div class="image-container">
+                <img src="2.jpeg" alt="Image 2">
+                <p style="text-align: center;"><h2 style="text-align:center;padding-top: 20px ;"> Data Structure</h2></p>
+            </div>
+        
+            <div class="image-container">
+                <img src="3.jpeg" alt="Image 3">
+                <p><h2 style="text-align:center;padding-top: 20px ;">Opearting System</h2></p>
+            </div>
+        
+            <div class="image-container">
+                <img src="4.jpeg" alt="Image 4">
+                <p><h2 style="text-align:center;padding-top: 20px ;">Visual Programming</h2></p>
+            </div>
+        
+            <div class="image-container">
+                <img src="5.jpeg" alt="Image 5">
+                <p><h2 style="text-align:center;padding-top: 20px ;">DataBase Management</h2></p>
+            </div>
+        
+            <div class="image-container">
+                <img src="6.jpeg" alt="Image 6">
+                <p><h2 style="text-align:center;padding-top: 20px ;">Programming Fundamental</h2></p>
+            </div>
+        
+            <div class="image-container" style="text-align: center;">
+                <img src="7.jpeg" alt="Image 7">
+                <p><h2 style="text-align:center;padding-top: 20px ;">Object Oriented Programming(OOP)</h2></p>
+            </div>
+        
+            <div class="image-container">
+                <img src="8.jpeg" alt="Image 8">
+                <p><h2 style="text-align:center;padding-top: 20px ;">Introduction To Software Engineering(ICT)</h2></p>
+            </div>
+        
+            <div class="image-container">
+                <img src="9.jpeg" alt="Image 9">
+                <p><h2 style="text-align:center;padding-top: 20px ;">Software Requirement Engineering</h2></p>
+            </div>
+        
+            <div class="image-container">
+                <img src="10.jpeg" alt="Image 10">
+                <p><h2 style="text-align:center;padding-top: 20px ;">Software Design and Architecture</h2></p>
+            </div>
+        
+            <div class="image-container">
+                <img src="11.jpeg" alt="Image 11">
+                <p><h2 style="text-align:center;padding-top: 20px ;">Discreate Structure</h2></p>
+            </div>
+        
+            <div class="image-container">
+                <img src="12.jpeg" alt="Image 12">
+                <p><h2 style="text-align:center;padding-top: 20px ;">Numerical Computing</h2></p>
+            </div>
+        </div>
+    </main>
+    <footer class="section-footer section">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="column about">
+            <h3>About</h3>
+            <p>
+              Explore our website to learn more about our courses, faculty, research initiatives, and student achievements. We look forward to welcoming you to our vibrant community and helping you embark on an exciting journey in software engineering.
+            </p>
+          </div>
+          <div class="column links">
+            <h3>Quick links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Event</a></li>
+              <li><a href="#">Courses</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">FAQ's & Help</a></li>
+            </ul>
+          </div>
+          <div class="column contact">
+            <h3>Get in Touch</h3>
+            <address>
+              <p><ion-icon name="location-outline"></ion-icon> BahawalPur, Pakistan</p>
+              <p><ion-icon name="call-outline"></ion-icon> <a href="tel:+929876543211">+92-62-9255580</a></p>
+              <p><ion-icon name="mail-outline"></ion-icon> <a href="mailto:info@iub.edu.pk">info@iub.edu.pk</a></p>
+            </address>
+          </div>
+        </div>
+      </div>
+    
+      <div class="f-social-icons">
+        <a href="https://www.instagram.com/theiubwp/" target="_blank">
+          <ion-icon class="icons" name="logo-instagram"></ion-icon>
+        </a>
+        <a href="https://www.facebook.com/DepartmentOfSoftwareEngineeringIUBofficialPage/" target="_blank">
+          <ion-icon name="logo-facebook" class="icons"></ion-icon>
+        </a>
+        <a href="https://twitter.com/theiubwp" target="_blank">
+          <ion-icon name="logo-twitter" class="icons"></ion-icon>
+        </a>
+        <a href="https://www.linkedin.com/school/the-islamia-university-of-bahawalpur/?original_referer=https%3A%2F%2Fwww.iub.edu.pk%2F" target="_blank">
+          <ion-icon name="logo-linkedin" class="icons"></ion-icon>
+        </a>
+        <a href="https://www.youtube.com/channel/UCaB7NBp3x31nVU2VoLS1a1Q" target="_blank">
+          <ion-icon name="logo-youtube" class="icons"></ion-icon>
+        </a>
+      </div>
+    
+      <div class="f-credits">
+        <p>
+          © 2023 The Islamia University of Bahawalpur iub.edu.pk.
+        </p>
+      </div>
+    </footer>
+    <script>
+const mobileNavbarBtn = document.querySelector('.mobile-navbar-btn');
+const navbar = document.querySelector('.navbar');
+const closeIcon = document.querySelector('.close-icon');
+
+mobileNavbarBtn.addEventListener('click', () => {
+  navbar.classList.toggle('active');
+  mobileNavbarBtn.classList.toggle('open');
+
+  if (navbar.classList.contains('active')) {
+    closeIcon.style.display = 'block';
+    mobileNavbarBtn.querySelector('[name="menu"]').style.display = 'none';
+  } else {
+    closeIcon.style.display = 'none';
+    mobileNavbarBtn.querySelector('[name="menu"]').style.display = 'block';
+  }
+});
+
+
+
+
+
+
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const imageContainers = document.querySelectorAll('.image-container');
+            imageContainers.forEach(container => {
+                const image = container.querySelector('img');
+                const imageWidth = image.width;
+                const imageHeight = image.height;
+
+                const dimensionsText = `Dimensions: ${imageWidth}px x ${imageHeight}px`;
+                const dimensionsElement = document.createElement('p');
+               
+            });
+        });
+    </script>
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+     <script src="index.js"></script>
+</body>
+</html>

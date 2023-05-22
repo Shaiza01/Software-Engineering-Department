@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>IUB SE Department</title>
+    <link rel="stylesheet" href="style.css" />
+
+
+    <style>
+
+        main {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          padding-bottom: 60px;
+        }
+    
+        main {
+          font-family: Arial, sans-serif;
+          background-color: rgb(237, 243, 247);
+        }
+    
+        /* Main container */
+        .container {
+          max-width: 960px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+    
+
+.aboutt {
+    margin-top: 30px;
+    margin-bottom: 60px;
+  background-color: rgb(240, 229, 238);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.aboutt h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.aboutt-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.aboutt-image {
+  flex: 0 0 30%;
+  margin-right: 20px;
+}
+
+.aboutt-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.aboutt-text {
+  flex: 1;
+}
+
+.aboutt p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Responsive media queries */
+@media screen and (max-width: 768px) {
+  .aboutt-content {
+    flex-direction: column;
+  }
+
+  .aboutt-image {
+    flex: 0 0 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.glowing-image {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.glowing-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+    
+        /* Events section */
+        .events {
+          background-color: rgb(240, 236, 240);
+          padding: 40px;
+          border-radius: 10px;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+          margin-bottom: 20px;
+        }
+    
+        .events h2 {
+          font-size: 28px;
+          margin-bottom: 50px;
+        }
+    
+        .event {
+          display: flex;
+          flex-wrap: wrap;
+          margin-bottom: 20px;
+        }
+    
+        .event-image {
+          flex: 0 0 200px;
+          margin-right: 30px;
+          
+        }
+    
+        .event-image img {
+          max-width: 100%;
+          border-radius: 5px;
+        }
+    
+        .event-content {
+          flex: 1;
+        }
+    
+        .event-title {
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+    
+        .event-description {
+          font-size: 16px;
+          line-height: 1.6;
+          color: #555;
+        }
+    
+        .event-button {
+          display: inline-block;
+          margin-top: 10px;
+          padding: 10px 20px;
+          background-color: #007bff;
+          color: #fff;
+          text-decoration: none;
+          border-radius: 5px;
+          transition: background-color 0.3s ease;
+          font-size: 14px;
+        }
+    
+        .event-button:hover {
+          background-color: #0056b3;
+        }
+    
+        /* Additional section */
+        .additional-section {
+          background-color: rgb(240, 229, 238);
+          padding: 40px;
+          border-radius: 10px;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+          margin-bottom: 20px;
+          margin-top: 40px;
+        }
+    
+        .additional-section h2 {
+          font-size: 28px;
+          margin-bottom: 20px;
+          text-align: center;
+          color: #333;
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+          transition: text-shadow 0.3s;
+        }
+
+
+
+    
+        .additional-section p {
+          font-size: 16px;
+          line-height: 1.6;
+          color: #555;
+        }
+    
+        /* Responsive media queries */
+        @media screen and (max-width: 768px) {
+          .container {
+            padding: 10px;
+          }
+    
+          .about,
+          .events,
+          .additional-section {
+            padding: 20px;
+          }
+    
+          .event {
+            flex-direction: column;
+          }
+    
+          .event-image {
+            flex: 0 0 100%;
+            margin-bottom: 10px;
+          }
+        }
+    
+        @media screen and (max-width: 480px) {
+          .about,
+          .events,
+          .additional-section {
+            padding: 10px;
+          }
+    
+          .about h2,
+          .events h2,
+          .additional-section h2 {
+            font-size: 24px;
+          }
+    
+          .about p,
+          .events p,
+          .additional-section p {
+            font-size: 14px;
+          }
+    
+          .event-title {
+            font-size: 18px;
+          }
+        }
+      </style>
+
+  </head>
+  <body>
+    <header class="header">
+      <a style="color: rgb(89, 22, 151)" href="#" target="_blank" class="logo">Department Of Software Engineering</a>
+      <div class="mobile-navbar-btn">
+        <ion-icon name="menu" class="mobile-nav-icon"></ion-icon>
+        <ion-icon name="close-outline" class="mobile-nav-icon close-icon"></ion-icon>
+      </div>
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li><a href="index.html" class="navbar-link">Home</a></li>
+          <li><a href="about.html" class="navbar-link">About</a></li>
+          <li><a href="programs.html" class="navbar-link">Courses</a></li>
+          <li><a href="contact us.html" class="navbar-link">Contact Us</a></li>
+          <li><a href="https://www.iub.edu.pk/" class="btn navbar-btn">My Iub</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <main>
+    <div class="container">
+        <div class="aboutt">
+            <center><h2>About Us</h2></center>
+            <div class="aboutt-content">
+              <div class="aboutt-image">
+                <img class="glowing-image" src="image.jpeg" alt="About Us Image">
+              </div>
+              <div class="aboutt-text">
+                <p>The BS in SE degree equips students with theoretical as well as technical knowledge of the fundamentals of software engineering, algorithm analysis, data structures, programming languages, web development, and mobile application development.</p>
+                <p>There are courses in Software Quality Assurance in order to ensure software correctness, reliability and safety, with the goal to produce high-quality software.</p>
+              </div>
+            </div>
+          </div>
+          
+    
+        <div class="events">
+          <center><h2>Upcoming Events</h2></center>
+          <div class="event">
+            <div class="event-image">
+              <img class="glowing-image" src="1st.jpeg" alt="Event 1">
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Tech Boost Workshop</h3>
+              <p class="event-description">
+                Dynamic workshop on Web devlopment Held on 27/march/2023.</p>
+              <a href="#" class="event-button">Learn More</a>
+            </div>
+          </div>
+          <div class="event">
+            <div class="event-image">
+              <img class="glowing-image" src="2nd.jpeg" alt="Event 2">
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Webniar Belive it Or</h3>
+              <p class="event-description">How your mindset can help you shift from. Held on 27/Feburary/2023</p>
+              <a href="#" class="event-button">Learn More</a>
+            </div>
+          </div>
+          <div class="event">
+            <div class="event-image">
+              <img class="glowing-image" src="3rd.jpeg" alt="Event 2">
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Welcome Students</h3>
+              <p class="event-description">
+                Warm Welcome to new Batch held on 30/january/2023.</p>
+              <a href="#" class="event-button">Learn More</a>
+            </div>
+          </div>
+          <div class="event">
+            <div class="event-image">
+              <img class="glowing-image" src="4rth.jpeg" alt="Event 2">
+            </div>
+            <div class="event-content">
+              <h3 class="event-title">Sports Gala</h3>
+              <p class="event-description">
+                Sports and co-coricular activty event held on 24/january/2023</p>
+              <a href="#" class="event-button">Learn More</a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="additional-section">
+          <h2>Looking to engineer your way to the top?</h2>
+          <p>Choose Software Engineering at IUB, where our experienced faculty, cutting-edge resources, and real-world projects will give you a rock-solid foundation in the latest software engineering technologies and practices. Don't just build code – build a career with Software Engineering at IUB..</p>
+        </div>
+      </div>
+    </main>
+
+
+
+      <footer class="section-footer section">
+        <div class="container">
+          <div class="footer-grid">
+            <div style="background-color: transparent;" class="column about">
+              <h3>About</h3>
+              <p>
+                Our software engineering program features a credit hour system covering programming, software design, and databases. With a rigorous curriculum, we prepare students with technical skills and principles for success in the field. Our tailored education and research opportunities equip students for their career path.
+              </p>
+            </div>
+            <div class="column links">
+              <h3>Quick links</h3>
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Event</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">FAQ's & Help</a></li>
+              </ul>
+            </div>
+            <div class="column contact">
+              <h3>Get in Touch</h3>
+              <address>
+                <p><ion-icon name="location-outline"></ion-icon> BahawalPur, Pakistan</p>
+                <p><ion-icon name="call-outline"></ion-icon> <a href="tel:+929876543211">+92-62-9255580</a></p>
+                <p><ion-icon name="mail-outline"></ion-icon> <a href="mailto:info@iub.edu.pk">info@iub.edu.pk</a></p>
+              </address>
+            </div>
+          </div>
+        </div>
+      
+        <div class="f-social-icons">
+          <a href="https://www.instagram.com/theiubwp/" target="_blank">
+            <ion-icon class="icons" name="logo-instagram"></ion-icon>
+          </a>
+          <a href="https://www.facebook.com/DepartmentOfSoftwareEngineeringIUBofficialPage/" target="_blank">
+            <ion-icon name="logo-facebook" class="icons"></ion-icon>
+          </a>
+          <a href="https://twitter.com/theiubwp" target="_blank">
+            <ion-icon name="logo-twitter" class="icons"></ion-icon>
+          </a>
+          <a href="https://www.linkedin.com/school/the-islamia-university-of-bahawalpur/?original_referer=https%3A%2F%2Fwww.iub.edu.pk%2F" target="_blank">
+            <ion-icon name="logo-linkedin" class="icons"></ion-icon>
+          </a>
+          <a href="https://www.youtube.com/channel/UCaB7NBp3x31nVU2VoLS1a1Q" target="_blank">
+            <ion-icon name="logo-youtube" class="icons"></ion-icon>
+          </a>
+        </div>
+      
+        <div class="f-credits">
+          <p>
+            © 2023 The Islamia University of Bahawalpur iub.edu.pk.
+          </p>
+        </div>
+      </footer>
+
+
+
+
+
+
+
+
+
+      
+    <script>
+        const mobileNavbarBtn = document.querySelector('.mobile-navbar-btn');
+        const navbar = document.querySelector('.navbar');
+        const closeIcon = document.querySelector('.close-icon');
+        
+        mobileNavbarBtn.addEventListener('click', () => {
+          navbar.classList.toggle('active');
+          mobileNavbarBtn.classList.toggle('open');
+        
+          if (navbar.classList.contains('active')) {
+            closeIcon.style.display = 'block';
+            mobileNavbarBtn.querySelector('[name="menu"]').style.display = 'none';
+          } else {
+            closeIcon.style.display = 'none';
+            mobileNavbarBtn.querySelector('[name="menu"]').style.display = 'block';
+          }
+        });
+
+        </script>
+        
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
